@@ -1,5 +1,3 @@
-package project;
-
 public class usuario {
 	
 	private int dni;

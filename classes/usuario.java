@@ -1,5 +1,8 @@
 package classes;
-public class usuario {
+
+import java.io.Serializable;
+
+public class usuario implements Serializable{
 	
 	private int dni;
 	private String nombreCompleto;
@@ -42,15 +45,20 @@ public class usuario {
 		return contraseña;
 	}
 	
-	public void setContrasena(String contraseña) {
+	public void setContraseña(String contraseña) {
 		this.contraseña=contraseña;
 	}
+	
 	
 	public void mostrarInformacionUsuario() {
 		System.out.println("El DNI del Usuario: "+dni);
 		System.out.println("El nombre completo del Usuario: "+nombreCompleto);
 		System.out.println("El correo electronico del Usuario: "+correoElectronico);
 	}
+	
+	public String toString() {
+        return dni + "," + nombreCompleto + "," + correoElectronico + "," + contraseña;
+    }
 	
 	
 }

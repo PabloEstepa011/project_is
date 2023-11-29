@@ -1,16 +1,17 @@
 package project;
 
 public class usuario {
+	
 	private int dni;
 	private String nombreCompleto;
 	private String correoElectronico;
-	private String contrasena;
+	private String contraseña;
 	
 	public usuario(int dni,String nombreCompleto,String correoElectronico,String contrasena){
 		this.dni=dni;
 		this.nombreCompleto=nombreCompleto;
 		this.correoElectronico=correoElectronico;
-		this.contrasena=contrasena;
+		this.contraseña=contraseña;
 	}
 		
 		
@@ -38,12 +39,12 @@ public class usuario {
 		this.correoElectronico=correoElectronico;
 	}
 	
-	public String getContrasena() {
-		return contrasena;
+	public String getContraseña() {
+		return contraseña;
 	}
 	
-	public void setContrasena(String contrasena) {
-		this.contrasena=contrasena;
+	public void setContrasena(String contraseña) {
+		this.contrasena=contraseña;
 	}
 	
 	public void mostrarInformacionUsuario() {

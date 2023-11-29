@@ -1,3 +1,4 @@
+package classes;
 public class usuario {
 	
 	private int dni;

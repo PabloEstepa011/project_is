@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class curso implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private int idCurso;
 	private String curso;
 	private LocalDate fechaInicio;

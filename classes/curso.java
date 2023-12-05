@@ -1,18 +1,18 @@
 package classes;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 
 public class curso implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private int idCurso;
 	private String curso;
-	private LocalDate fechaInicio;
-	private LocalDate fechaFin;
+	private Date fechaInicio;
+	private Date fechaFin;
 	private usuario ponente;
 	private String descripcion;
 	
-	public curso(int idCurso,String curso,LocalDate fechaInicio,LocalDate fechaFin, usuario ponente,String descripcion) {
+	public curso(int idCurso,String curso,Date fechaInicio,Date fechaFin, usuario ponente,String descripcion) {
 		this.idCurso=idCurso;
 		this.curso=curso;
 		this.fechaInicio=fechaInicio;
@@ -37,20 +37,35 @@ public class curso implements Serializable{
 		this.curso=curso;
 	}
 	
-	public LocalDate getfechaInicio() {
+	public Date getfechaInicio() {
 		return fechaInicio;
 	}
 	
-	public void setfechaInicio(LocalDate fechaInicio) {
+	public void setfechaInicio(Date fechaInicio) {
 		this.fechaInicio=fechaInicio;
 	}
 	
-	public LocalDate getfechaFin() {
+	public Date getfechaFin() {
 		return fechaFin;
 	}
 	
-	public void setfechaFin(LocalDate fechaFin) {
+	public usuario getponente() {
+		return ponente;
+	}
+	public void setdniponente(usuario ponente) {
+		this.ponente=ponente;
+	}
+	
+	public void setfechaFin(Date fechaFin) {
 		this.fechaFin=fechaFin;
+	}
+	
+	public String getdescripcion() {
+		return descripcion;
+	}
+	
+	public void setdescripcion(String descripcion) {
+		this.descripcion=descripcion;
 	}
 	
 	public String toString() {

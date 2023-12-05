@@ -1,6 +1,8 @@
 package classes;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class usuario implements Serializable{
 	
@@ -9,12 +11,14 @@ public class usuario implements Serializable{
 	private String nombreCompleto;
 	private String correoElectronico;
 	private String contraseña;
+	private List<Integer> cursosInscritos;  
 	
 	public usuario(int dni,String nombreCompleto,String correoElectronico,String contraseña){
 		this.dni=dni;
 		this.nombreCompleto=nombreCompleto;
 		this.correoElectronico=correoElectronico;
 		this.contraseña=contraseña;
+		this.cursosInscritos = new ArrayList<>();
 	}
 		
 		
@@ -50,6 +54,13 @@ public class usuario implements Serializable{
 		this.contraseña=contraseña;
 	}
 	
+	public List<Integer> getCursosInscritos() {
+        return cursosInscritos;
+    }
+
+    public void inscribirEnCurso(int idCurso) {
+        cursosInscritos.add(idCurso);
+    }
 	
 	public void mostrarInformacionUsuario() {
 		System.out.println("El DNI del Usuario: "+dni);

@@ -134,6 +134,7 @@ public class gestorCursos {
     	            System.out.println("Nombre: " + curso.getcurso());
     	            System.out.println("Fecha de Inicio: " + curso.getfechaInicio());
     	            System.out.println("Fecha de Fin: " + curso.getfechaFin());
+    	            System.out.println("El maximo de inscripciones: "+curso.getmaxins());
     	            System.out.println("DNI ponenete: " + curso.getponente());
     	            System.out.println("Descripción: " + curso.getdescripcion());
     	            System.out.println("--------------");
@@ -223,7 +224,8 @@ public class gestorCursos {
                 String fechaInicioStr = parts[2];
                 String fechaFinStr = parts[3];
                 String nombreponente = parts[4];
-                String descripcion = parts[5];
+                int maxinscripciones = Integer.parseInt(parts[5]);
+                String descripcion = parts[6];
 
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 Date fechaInicio = dateFormat.parse(fechaInicioStr);
@@ -234,7 +236,7 @@ public class gestorCursos {
                     System.out.println("Error: Ponente no encontrado.");
                     continue;  // Saltar al siguiente ciclo si el ponente no se encuentra
                 }
-                cursos.add(new curso(idCurso, nombreCurso,fechaInicio,fechaFin,ponente,descripcion));
+                cursos.add(new curso(idCurso, nombreCurso,fechaInicio,fechaFin,ponente,maxinscripciones,descripcion));
             }
         } catch (IOException | NumberFormatException | ParseException e) {
             e.printStackTrace();

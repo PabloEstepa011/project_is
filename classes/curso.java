@@ -10,14 +10,16 @@ public class curso implements Serializable{
 	private Date fechaInicio;
 	private Date fechaFin;
 	private usuario ponente;
+	private int maxinscripciones;
 	private String descripcion;
 	
-	public curso(int idCurso,String curso,Date fechaInicio,Date fechaFin, usuario ponente,String descripcion) {
+	public curso(int idCurso,String curso,Date fechaInicio,Date fechaFin, usuario ponente,int maxinscripciones,String descripcion) {
 		this.idCurso=idCurso;
 		this.curso=curso;
 		this.fechaInicio=fechaInicio;
 		this.fechaFin=fechaFin;
 		this.ponente=ponente;
+		this.maxinscripciones=maxinscripciones;
 		this.descripcion=descripcion;
 	}
 	
@@ -56,6 +58,14 @@ public class curso implements Serializable{
 		this.ponente=ponente;
 	}
 	
+	public int getmaxins() {
+		return maxinscripciones;
+	}
+	
+	public void setmasins(int maxinscripciones) {
+		this.maxinscripciones=maxinscripciones;
+	}
+	
 	public void setfechaFin(Date fechaFin) {
 		this.fechaFin=fechaFin;
 	}
@@ -69,6 +79,6 @@ public class curso implements Serializable{
 	}
 	
 	public String toString() {
-        return idCurso + "," + curso + "," + fechaInicio + "," + fechaFin + "," + ponente.getDni() + "," + descripcion;
+        return idCurso + "," + curso + "," + fechaInicio + "," + fechaFin + "," + ponente.getDni()+", " + "maxinscripciones" + "," + descripcion;
 	}
 }
